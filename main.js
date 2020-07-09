@@ -1,15 +1,15 @@
-var mymap = L.map('mapid').setView([45.4618,9.1592], 13);
+var mymap = L.map('mapid').setView([32.254189,-9.249825], 13);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    attribution: 'SmartZoneApplicationWeb',
     maxZoom: 18,
-    id: 'mapbox/streets-v11',
+    id: 'mapbox/outdoors-v11',
     //accessToken: 'your.mapbox.access.token'
     accessToken: 'pk.eyJ1IjoiYW5hc2NoYW1raGkiLCJhIjoiY2tjZXF6a3FsMDN5dzJzbG12eWU4dXR5MiJ9.sKRHfRq8lKU1RoF0q0rp7A' 
 }).addTo(mymap);
 
-var marker = L.marker([45.4618,9.1592]).addTo(mymap);
+var marker = L.marker([32.254189,-9.249825]).addTo(mymap);
 
-var circle = L.circle([45.4618,9.1592], {
+var circle = L.circle([32.254189,-9.249825], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
