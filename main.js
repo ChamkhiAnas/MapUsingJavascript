@@ -1,4 +1,4 @@
-var mymap = L.map('mapid').setView([32.254189,-9.249825], 13);
+var mymap = L.map('mapid').setView([51.5, -0.09], 13);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'SmartZoneApplicationWeb',
     maxZoom: 18,
@@ -7,9 +7,14 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiYW5hc2NoYW1raGkiLCJhIjoiY2tjZXF6a3FsMDN5dzJzbG12eWU4dXR5MiJ9.sKRHfRq8lKU1RoF0q0rp7A' 
 }).addTo(mymap);
 
-var marker = L.marker([32.254189,-9.249825]).addTo(mymap);
+var lat=51.5
+var lng=-0.09
 
-var circle = L.circle([32.254189,-9.249825], {
+
+
+var marker = L.marker([lat,lng]).addTo(mymap);
+
+var circle = L.circle([51.508, -0.11], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
@@ -17,7 +22,33 @@ var circle = L.circle([32.254189,-9.249825], {
 }).addTo(mymap);
 
 var polygon = L.polygon([
-    [45.4618,9.1592],
-    [45.4518,9.1792],
-    [45.4518,9.1592]
+    [51.509, -0.08],
+    [51.503, -0.06],
+    [51.51, -0.047]
 ]).addTo(mymap);
+
+marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+circle.bindPopup("I am a circle.");
+polygon.bindPopup("I am a polygon.");
+
+
+
+
+function onMapClick(e) {
+    lat=e.latlng.lat
+    lng=e.latlng.lng
+    console.log("langitude",lat)
+    console.log("langitude",lng)
+}
+
+mymap.on('click', onMapClick);
+
+
+
+
+
+
+// var popup = L.popup()
+//     .setLatLng([51.5, -0.09])
+//     .setContent("Here i'am")
+//     .openOn(mymap);
