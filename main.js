@@ -1,4 +1,4 @@
-var map = L.map('mapid').setView([32.25522796327514,-9.252945184707642], 13);
+var map = L.map('mapid').setView([32.25527332902743,-369.2534065246582], 13);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'SmartZoneApplicationWeb',
     maxZoom: 18,
@@ -8,7 +8,169 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map);
 
 
-L.marker([32.25522796327514,-9.252945184707642]).addTo(map).bindPopup("The Marker is working").openPopup();
+// L.marker([32.25522796327514,-9.252945184707642],{draggable:true}).addTo(map).bindPopup("The Marker is working").openPopup();
+
+
+
+var aa = {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -369.2534065246582,
+            32.25527332902743
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -369.25166845321655,
+            32.25511001221306
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -369.2532777786255,
+            32.256398392432544
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -369.25437211990356,
+            32.25420269122789
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -369.2539429664612,
+            32.25732383736298
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -369.2469906806946,
+                32.25843072969367
+              ],
+              [
+                -369.24696922302246,
+                32.25843072969367
+              ],
+              [
+                -369.24696922302246,
+                32.258448875357146
+              ],
+              [
+                -369.2469906806946,
+                32.258448875357146
+              ],
+              [
+                -369.2469906806946,
+                32.25843072969367
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -369.25076723098755,
+                32.2535312678614
+              ],
+              [
+                -369.24684047698975,
+                32.2535312678614
+              ],
+              [
+                -369.24684047698975,
+                32.25806781566251
+              ],
+              [
+                -369.25076723098755,
+                32.25806781566251
+              ],
+              [
+                -369.25076723098755,
+                32.2535312678614
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -369.2473340034485,
+                32.25971906278678
+              ],
+              [
+                -369.24694776535034,
+                32.258448875357146
+              ],
+              [
+                -369.245080947876,
+                32.26002753419455
+              ],
+              [
+                -369.2468619346618,
+                32.26039044039102
+              ],
+              [
+                -369.2473340034485,
+                32.25971906278678
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  }
+
+new L.GeoJSON(aa).addTo(map);
+
+
+
+
 
 
 
